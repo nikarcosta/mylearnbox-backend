@@ -17,7 +17,7 @@ model sessions {
 
 model users {
   id         Int        @id @default(autoincrement())
-  email      String     @db.VarChar(255)
+  email      String     @unique @db.VarChar(255)
   password   String     @db.VarChar(255)
   username   String     @db.VarChar(255)
   pictureUrl String     @db.VarChar(255)
